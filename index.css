@@ -1,0 +1,197 @@
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+             :root {
+                --first-font: 'Josefin Sans', sans-serif;
+                --second-font: 'Great Vibes', sans-serif;
+                --white: #ffffff;
+                --black: #000000;
+                --light: #42cbf8;
+                --peach: #FFE5B4;
+                --red: rgb(199, 14, 14);
+                --grey: rgb(122, 120, 120);
+                --gold: rgb(255, 218, 10);
+            }
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: var(--first-font);
+                background-color: var(--peach);
+                text-transform: capitalize;
+            }
+            
+            P {
+                word-wrap: break-word;
+                width: 20rem;
+                text-transform: initial;
+                padding-top: 1.8rem;
+            }
+            
+            .photo {
+                width: 10rem;
+                height: 10rem;
+                object-fit: cover;
+                border: 4px solid var(--gold);
+                border-radius: 3em;
+                box-shadow: 1px 1px var(--black);
+                margin-top: 2rem;
+                margin-right: 1rem;
+                display: grid;
+                justify-content: center;
+                align-content: center;
+            }
+            
+            .title {
+                text-align: center;
+                font-size: 2.5rem;
+                font-family: var(--second-font);
+                text-shadow: 2px 2px var(--white);
+                padding-left: 3rem;
+                display: grid;
+                justify-content: center;
+            }
+            
+            .menu {
+                margin: 2rem;
+                margin-right: 6rem;
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                padding: 3rem;
+            }
+            
+            .menu-center {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-row: auto;
+            }
+            
+            .menu-item {
+                width: 30rem;
+                display: flex;
+                margin: 2rem;
+            }
+            
+            .item-info {
+                display: grid;
+                justify-content: center;
+                align-content: center;
+            }
+            
+            header {
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.3rem;
+                padding: 0.5rem;
+                border-bottom: 2px solid var(--black);
+            }
+            
+            header h4 {
+                text-shadow: 2px 2px var(--white);
+            }
+            
+            .price {
+                text-align: end;
+                margin-right: 1rem;
+                color: var(--gold);
+                text-shadow: 1px 1px var(--black);
+            }
+            
+            .underline {
+                background-color: #000000;
+                width: 17rem;
+                height: 0.3rem;
+            }
+            
+            button {
+                background-color: transparent;
+                font-size: 2rem;
+                border: 4px solid var(--gold);
+                border-radius: 1rem;
+                padding: 0.5rem;
+            }
+            
+            .btn-container {
+                margin-top: 3rem;
+                margin-left: 4rem;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .filter-btn {
+                margin: 0 1rem;
+                text-shadow: 2px 2px var(--white);
+            }
+            
+            .filter-btn:hover {
+                color: var(--black);
+                text-shadow: 1px 1px var(--black);
+                background-color: white;
+                border: 0;
+            }
+            
+            @media screen and (max-width:1100px) {
+                .menu-center {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .menu {
+                    margin-left: 5rem;
+                }
+            }
+            
+            @media screen and (max-width:550px) {
+                .menu-item {
+                    flex-direction: column;
+                }
+                .photo {
+                    align-self: center;
+                }
+                .filter-btn {
+                    font-size: 1.5rem;
+                }
+                .btn-container {
+                    margin-top: 1.5rem;
+                    margin-left: 0;
+                }
+                .menu {
+                    margin: 0;
+                    margin-top: 1rem;
+                }
+                .menu-item {
+                    margin: 0;
+                    width: auto;
+                }
+                .photo {
+                    margin-bottom: 1rem;
+                }
+                .title {
+                    padding-left: 0;
+                }
+                header {
+                    width: 20rem;
+                }
+                p {
+                    padding-top: 0.8rem;
+                }
+            }
+            
+            @media screen and (max-width:375px) {
+                .filter-btn {
+                    font-size: 1rem;
+                    margin: 0 0.5rem;
+                }
+                .menu-item {
+                    width: 16rem;
+                }
+                header {
+                    width: 16rem;
+                }
+                p {
+                    width: 16rem;
+                }
+            }
